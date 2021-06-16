@@ -1,0 +1,44 @@
+<head>
+    <style>
+        .pt {
+            width: 90vw;
+            margin: 0 auto;
+            max-width: 1370px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-column-gap: 1.5rem;
+            grid-row-gap: 2rem;
+        }
+
+        .price {
+            text-align: center;
+            border-bottom-style: solid;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="pt">
+        {{# each records}}
+        <div class="thumblin" style="width: 18rem;">
+            <img src="../uphold/{{this.image}}" class="card-img-top" alt="profile image" class="img-responsive">
+            <div class="card-body">
+                <div class="clearfix">
+
+                    <h1 class="price ">{{this.title}}</h1>
+                    <p class="card-text">{{this.description}}</p>
+                    {{!-- <p class="card-text">Author: {{this.name}}</p> --}}
+                    {{!-- <a class="card-text" href="{{this.link}}">hike</a> --}}
+
+
+
+
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+</body>
